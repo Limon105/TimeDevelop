@@ -6,8 +6,7 @@ using System.Windows.Forms;
 
 namespace Lab.D_1
 {
-    static class Program
-    {
+    static class Program{
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
