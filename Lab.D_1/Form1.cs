@@ -16,27 +16,17 @@ namespace Lab.D_1
         {
             InitializeComponent();
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            textBox1.Clear(); // очистка полей
-            textBox2.Clear();
-            label3.Visible = false;
-        }
-
+	
         bool region1(double x, double y)
 	    {
             return ((y>=2*x-2)&&(y>=-2*x-2)&&(y<=0)); // вычисление выражения для первой области //
 	    }
+	    
         bool region2(double x, double y)
         {
             return ((((x + 1) * (x + 1) + (y - 1) * (y - 1)) <= 1) && (x * x + (y - 1) * (y - 1) >= 1));  // вычисление выражения для второй области //
         }
+	
         bool region3(double x, double y)
         {
             return ((((x - 1) * (x - 1) + (y - 1) * (y - 1)) <= 1) && (x * x + (y - 1) * (y - 1) >= 1)&& (((x + 1) * (x + 1) + (y - 1) * (y - 1)) <= 1)); // вычисление выражения для третьей области //
@@ -46,6 +36,7 @@ namespace Lab.D_1
         {
             return ((x * x + (y - 1) * (y - 1) >= 1)&& (((x - 1) * (x - 1) + (y - 1) * (y - 1)) <= 1)); // вычисление выражения для четвертой области //
         }
+	
     private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -64,7 +55,7 @@ namespace Lab.D_1
             }
             catch(Exception)
             {
-                MessageBox.Show("Не верные типы данных. Повторите ввод.", "Error 404"); // отлавливание исключений
+                MessageBox.Show("Не верные типы данных. Повторите ввод."); // отлавливание исключений
             }
         }
     }
